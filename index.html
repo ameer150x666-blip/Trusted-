@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRG ORNAMENTATION - منصة زخرفة النصوص بالذكاء الاصطناعي</title>
+
+    <!-- Google Fonts - مكتبة خطوط ضخمة وعصرية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=El+Messiri:wght@400;500;600;700&family=Readex+Pro:wght@200;300;400;500;600;700&family=Almarai:wght@300;400;700;800&family=Tajawal:wght@200;300;400;500;700;800;900&family=Changa:wght@200;300;400;500;600;700;800&family=Markazi+Text:wght@400;500;600;700&family=Scheherazade+New:wght@400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Lateef:wght@200;300;400;500;600;700;800&family=Rakkas&family=Aref+Ruqaa:wght@400;700&family=Harmattan:wght@400;500;600;700&family=Jomhuria&family=Kufam:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Lemonada:wght@300;400;500;600;700&family=Mada:wght@200;300;400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&family=Zain:wght@200;300;400;500;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400;500;600;700&family=Pacifico&family=Great+Vibes&family=Satisfy&family=Caveat:wght@400;500;600;700&family=Righteous&family=Bangers&family=Press+Start+2P&family=Orbitron:wght@400;500;600;700;800;900&family=Audiowide&family=Monoton&family=Fredoka+One&family=Bungee+Inline&family=Bungee+Shade&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* ============ CSS Variables ============ */
+        :root {
+            --bg: #fafbfc;
+            --bg-secondary: #f0f2f5;
+            --surface: #ffffff;
+            --text: #1a1a2e;
+            --text-secondary: #6b7280;
+            --text-muted: #9ca3af;
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #eef2ff;
+            --primary-glow: rgba(99, 102, 241, 0.3);
+            --secondary: #8b5cf6;
+            --accent: #ec4899;
+            --accent-light: #fdf2f8;
+            --amber: #f59e0b;
+            --amber-light: #fffbeb;
+            --emerald: #10b981;
+            --emerald-light: #ecfdf5;
+            --red: #ef4444;
+            --red-light: #fef2f2;
+            --sky: #0ea5e9;
+            --sky-light: #f0f9ff;
+            --border: #e5e7eb;
+            --border-light: #f3f4f6;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+            --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.04);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.07), 0 4px 10px rgba(0,0,0,0.04);
+            --shadow-xl: 0 20px 40px rgba(0,0,0,0.1);
+            --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.25);
+            --radius-xs: 6px;
+            --radius-sm: 10px;
+            --radius: 16px;
+            --radius-lg: 20px;
+            --radius-xl: 24px;
+            --radius-2xl: 32px;
+            --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-heading: 'Cairo', 'El Messiri', sans-serif;
+            --font-body: 'Tajawal', 'Almarai', sans-serif;
+            --font-decoration: 'Dancing Script', 'Pacifico', 'Great Vibes', cursive;
+            --font-mono: 'Readex Pro', 'Rubik', sans-serif;
+        }
+
+        .dark {
+            --bg: #0b0f1a;
+            --bg-secondary: #111827;
+            --surface: #1a1f2e;
+            --text: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --primary: #818cf8;
+            --primary-dark: #6366f1;
+            --primary-light: #1e1b4b;
+            --primary-glow: rgba(129, 140, 248, 0.4);
+            --secondary: #a78bfa;
+            --accent: #f472b6;
+            --accent-light: #4a1d3a;
+            --amber-light: #3d2e00;
+            --emerald-light: #0a2e1f;
+            --red-light: #3d0a0a;
+            --sky-light: #0a2e3d;
+            --border: #2d3548;
+            --border-light: #1f2937;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+            --shadow: 0 1px 3px rgba(0,0,0,0.4);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.4);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.5);
+            --shadow-xl: 0 20px 40px rgba(0,0,0,0.6);
+            --shadow-glow: 0 0 40px rgba(129, 140, 248, 0.35);
+        }
+
+        /* ============ Reset & Base ============ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            transition: background var(--transition-slow), color var(--transition-slow);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ============ Background Decoration ============ */
+        .bg-decoration {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.12;
+            animation: orbFloat 20s ease-in-out infinite;
+        }
+        .bg-orb:nth-child(1) {
+            width: 500px;
+            height: 500px;
+            background: var(--primary);
+            top: -150px;
+            right: -150px;
+            animation-delay: 0s;
+        }
+        .bg-orb:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            background: var(--secondary);
+            bottom: -100px;
+            left: -100px;
+            animation-delay: -7s;
+        }
+        .bg-orb:nth-child(3) {
+            width: 350px;
+            height: 350px;
+            background: var(--accent);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: -14s;
+        }
+
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(60px, -40px) scale(1.1); }
+            50% { transform: translate(-30px, 50px) scale(0.9); }
+            75% { transform: translate(-50px, -30px) scale(1.05); }
+        }
+
+        /* ============ Header ============ */
+        header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 0.9rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .dark header {
+            background: rgba(26, 31, 46, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .header-inner {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            font-family: var(--font-heading);
+            transition: all var(--transition);
+        }
+        .logo:hover {
+            transform: scale(1.02);
+        }
+
+        .logo-icon-wrapper {
+            position: relative;
+            width: 46px;
+            height: 46px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+            animation: logoPulse 3s ease-in-out infinite;
+        }
+        @keyframes logoPulse {
+            0%, 100% { box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35); }
+            50% { box-shadow: 0 4px 25px rgba(139, 92, 246, 0.55); }
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        .logo-main {
+            font-weight: 900;
+            font-size: 1.3rem;
+            line-height: 1.2;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .logo-sub {
+            font-size: 0.65rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .btn {
+            padding: 0.65rem 1.3rem;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            font-family: var(--font-body);
+            letter-spacing: 0.3px;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn:active {
+            transform: scale(0.96);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+            font-weight: 700;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 6px 25px rgba(99, 102, 241, 0.45);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            color: var(--text);
+            font-weight: 600;
+        }
+        .btn-outline:hover {
+            background: var(--primary-light);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            border: none;
+            color: var(--text);
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+        }
+        .btn-ghost:hover {
+            background: var(--bg-secondary);
+        }
+
+        .btn-icon {
+            width: 44px;
+            height: 44px;
+            padding: 0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            background: var(--surface);
+            border: 2px solid var(--border);
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all var(--transition);
+            position: relative;
+        }
+        .btn-icon:hover {
+            background: var(--primary-light);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        .btn-icon .badge {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            width: 20px;
+            height: 20px;
+            background: var(--red);
+            color: #fff;
+            border-radius: 50%;
+            font-size: 0.65rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-mono);
+        }
+
+        /* ============ Main Layout ============ */
+        main {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ============ Hero Section ============ */
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 1rem 1rem;
+            position: relative;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            animation: fadeInDown 0.6s ease;
+        }
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--emerald);
+            border-radius: 50%;
+            animation: dotPulse 1.5s infinite;
+        }
+        @keyframes dotPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            animation: fadeInDown 0.6s ease 0.1s both;
+        }
+        .hero p {
+            color: var(--text-secondary);
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+            animation: fadeInDown 0.6s ease 0.2s both;
+        }
+
+        /* ============ Stats Bar ============ */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            animation: fadeInDown 0.6s ease 0.3s both;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 0.5rem 1rem;
+        }
+        .stat-number {
+            font-family: var(--font-mono);
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-top: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ============ Input Area ============ */
+        .input-area {
+            background: var(--surface);
+            border-radius: var(--radius-2xl);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-xl);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .input-area::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899, #f59e0b);
+            border-radius: 4px 4px 0 0;
+        }
+
+        .input-label {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .input-wrapper {
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .input-wrapper .input-field {
+            flex: 1;
+            min-width: 200px;
+            padding: 1.1rem 1.8rem;
+            border-radius: 50px;
+            border: 2.5px solid var(--border);
+            font-size: 1.15rem;
+            background: var(--bg);
+            color: var(--text);
+            transition: all var(--transition);
+            font-family: var(--font-body);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        .input-wrapper .input-field:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 6px rgba(99, 102, 241, 0.08), var(--shadow-glow);
+            background: var(--surface);
+        }
+        .input-wrapper .input-field::placeholder {
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .btn-generate {
+            padding: 1.1rem 2rem;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: #fff;
+            border: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: all var(--transition);
+            font-family: var(--font-heading);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35);
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .btn-generate:hover {
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.5);
+            transform: translateY(-3px);
+        }
+        .btn-generate:active {
+            transform: translateY(-1px) scale(0.97);
+        }
+
+        .btn-generate .sparkle {
+            display: inline-block;
+            animation: sparkle 1.5s infinite;
+        }
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.3) rotate(15deg); }
+        }
+
+        /* ============ Filter Tabs ============ */
+        .filter-section {
+            margin-top: 1.5rem;
+        }
+        .filter-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.6rem;
+        }
+        .filter-tabs {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .filter-tab {
+            padding: 0.55rem 1.2rem;
+            border-radius: 50px;
+            border: 2px solid var(--border);
+            background: var(--surface);
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all var(--transition);
+            white-space: nowrap;
+            font-family: var(--font-body);
+            letter-spacing: 0.3px;
+        }
+        .filter-tab:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: var(--primary-light);
+            transform: translateY(-1px);
+        }
+        .filter-tab.active {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: #fff;
+            border-color: transparent;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+        }
+        .filter-tab .tab-icon {
+            margin-left: 0.3rem;
+        }
+
+        /* Search within */
+        .search-results {
+            margin-top: 1rem;
+            position: relative;
+        }
+        .search-results input {
+            width: 100%;
+            padding: 0.8rem 1.2rem 0.8rem 3rem;
+            border-radius: 50px;
+            border: 2px solid var(--border);
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            transition: all var(--transition);
+        }
+        .search-results input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.06);
+        }
+        .search-results .search-icon {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* ============ Results ============ */
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+        .results-header h2 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .results-count-badge {
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.3rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            font-family: var(--font-mono);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .result-card {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 1.8rem;
+            border: 2px solid var(--border);
+            transition: all var(--transition);
+            position: relative;
+            box-shadow: var(--shadow);
+            cursor: default;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            overflow: hidden;
+        }
+        .result-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(99,102,241,0.03), rgba(139,92,246,0.03));
+            opacity: 0;
+            transition: opacity var(--transition);
+            pointer-events: none;
+            border-radius: inherit;
+        }
+        .result-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-xl);
+            transform: translateY(-4px);
+        }
+        .result-card:hover::after {
+            opacity: 1;
+        }
+        .result-card .ornamented-text {
+            font-size: 1.6rem;
+            font-weight: 700;
+            word-break: break-all;
+            line-height: 2;
+            min-height: 3.5rem;
+            display: flex;
+            align-items: center;
+            font-family: var(--font-heading);
+            letter-spacing: 1px;
+        }
+        .result-card .style-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            background: var(--bg-secondary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            width: fit-content;
+        }
+        .card-actions {
+            display: flex;
+            gap: 0.6rem;
+            align-items: center;
+        }
+        .btn-copy {
+            flex: 1;
+            padding: 0.6rem 1rem;
+            font-size: 0.85rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 2px solid var(--border);
+            background: var(--bg);
+            color: var(--text);
+            transition: all var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            font-family: var(--font-body);
+            letter-spacing: 0.3px;
+        }
+        .btn-copy:hover {
+            background: var(--primary-light);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        .btn-copy.copied {
+            background: var(--emerald);
+            color: #fff;
+            border-color: var(--emerald);
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
+        }
+        .btn-fav {
+            width: 44px;
+            height: 44px;
+            padding: 0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: 2px solid var(--border);
+            background: var(--bg);
+            transition: all var(--transition);
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .btn-fav:hover {
+            border-color: var(--red);
+            color: var(--red);
+            background: var(--red-light);
+        }
+        .btn-fav.favorited {
+            color: #fff;
+            border-color: var(--red);
+            background: var(--red);
+            animation: heartPop 0.4s ease;
+        }
+        @keyframes heartPop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 5rem 2rem;
+            color: var(--text-secondary);
+            grid-column: 1 / -1;
+        }
+        .empty-state .empty-icon {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.7;
+            animation: floatIcon 3s ease-in-out infinite;
+        }
+        @keyframes floatIcon {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .empty-state h3 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        /* ============ Trending Section ============ */
+        .trending-section {
+            margin-top: 3rem;
+            background: var(--surface);
+            border-radius: var(--radius-2xl);
+            padding: 2.5rem;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-lg);
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .trending-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.15), transparent 70%);
+            pointer-events: none;
+            border-radius: 50%;
+        }
+        .trending-section h2 {
+            font-family: var(--font-heading);
+            margin-bottom: 1.8rem;
+            font-size: 1.4rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .trending-section h2 .fire-icon {
+            font-size: 1.6rem;
+            animation: fireFlicker 0.8s infinite alternate;
+        }
+        @keyframes fireFlicker {
+            from { transform: scale(1); }
+            to { transform: scale(1.15); }
+        }
+        .trending-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+        .trending-item {
+            background: var(--bg);
+            padding: 1.2rem 1rem;
+            border-radius: var(--radius);
+            border: 2px solid var(--border);
+            cursor: pointer;
+            transition: all var(--transition);
+            font-weight: 600;
+            text-align: center;
+            word-break: break-all;
+            font-family: var(--font-heading);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .trending-item:hover {
+            border-color: var(--amber);
+            background: var(--amber-light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        .trending-item .trend-count {
+            font-size: 0.7rem;
+            color: var(--amber);
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ============ Footer ============ */
+        footer {
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+            position: relative;
+            z-index: 1;
+            transition: all var(--transition);
+        }
+        .footer-inner {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+        }
+        .footer-col h4 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            color: var(--text);
+        }
+        .footer-col p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 0.7rem;
+        }
+        .footer-col ul li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color var(--transition);
+            font-size: 0.9rem;
+        }
+        .footer-col ul li a:hover {
+            color: var(--primary);
+        }
+
+        /* Social Icons Section */
+        .social-section {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+        .social-section h4 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+            color: var(--text);
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: #fff;
+            text-decoration: none;
+            transition: all var(--transition);
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+        .social-icon::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transform: scale(0);
+            transition: transform 0.3s ease;
+        }
+        .social-icon:hover::after {
+            transform: scale(1);
+        }
+        .social-icon:hover {
+            transform: translateY(-5px) scale(1.08);
+            box-shadow: var(--shadow-xl);
+        }
+        .social-icon.instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+        .social-icon.facebook {
+            background: linear-gradient(45deg, #1877f2, #166fe5);
+        }
+        .social-icon.tiktok {
+            background: #000;
+        }
+        .social-icon.github {
+            background: #333;
+        }
+        .social-icon.x {
+            background: #1da1f2;
+        }
+        .social-icon .social-tooltip {
+            position: absolute;
+            bottom: -35px;
+            background: var(--text);
+            color: var(--bg);
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: all var(--transition);
+            font-family: var(--font-body);
+        }
+        .social-icon:hover .social-tooltip {
+            bottom: -30px;
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        /* ============ Toast ============ */
+        .toast-container {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        .toast {
+            background: #1e293b;
+            color: #fff;
+            padding: 0.9rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            animation: slideUpToast 0.35s ease, fadeOutToast 0.35s ease 2s forwards;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            font-family: var(--font-body);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .dark .toast {
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+        @keyframes slideUpToast {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeOutToast {
+            from { opacity: 1; transform: translateY(0); }
+            to { opacity: 0; transform: translateY(-15px); }
+        }
+
+        /* ============ Responsive ============ */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .input-wrapper {
+                flex-direction: column;
+            }
+            .input-wrapper .input-field {
+                width: 100%;
+            }
+            .btn-generate {
+                width: 100%;
+                justify-content: center;
+            }
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+            .filter-tabs {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 0.5rem;
+            }
+            .stats-bar {
+                gap: 1rem;
+            }
+            .stat-number {
+                font-size: 1.4rem;
+            }
+            .footer-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            main {
+                padding: 1rem;
+            }
+            .input-area {
+                padding: 1.5rem;
+            }
+            .result-card {
+                padding: 1.2rem;
+            }
+            .social-icons {
+                gap: 0.6rem;
+            }
+            .social-icon {
+                width: 42px;
+                height: 42px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Decoration -->
+    <div class="bg-decoration">
+        <div class="bg-orb"></div>
+        <div class="bg-orb"></div>
+        <div class="bg-orb"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon-wrapper">✨</div>
+                <div class="logo-text">
+                    <span class="logo-main">SRG ORNAMENTATION</span>
+                    <span class="logo-sub">AI Text Ornamentation</span>
+                </div>
+            </a>
+            <div class="header-actions">
+                <button class="btn-icon" id="themeToggle" title="تبديل الوضع الليلي" aria-label="تبديل الوضع الليلي">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="btn btn-outline" id="showFavoritesBtn">
+                    <i class="fa-solid fa-heart"></i> المفضلة
+                    <span class="badge" id="favBadge" style="display:none;">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-badge">
+                <span class="dot"></span> مدعوم بالذكاء الاصطناعي
+            </div>
+            <h1>حوّل نصوصك إلى فن بصري</h1>
+            <p>أدخل أي نص أو اسم، وشاهده يتحول فوراً إلى مئات الزخارف الفريدة بأساليب كلاسيكية، عربية، يابانية، ورمزية من مكتبة خطوط ضخمة ومتنوعة.</p>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalStyles">+50</div>
+                    <div class="stat-label">نمط زخرفة</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">+200</div>
+                    <div class="stat-label">خط عالمي</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="totalCopies">0</div>
+                    <div class="stat-label">نسخة تمت</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Input Area -->
+        <section class="input-area">
+            <div class="input-label">
+                <i class="fa-solid fa-pen-fancy" style="color: var(--primary);"></i>
+                اكتب النص المراد زخرفته
+            </div>
+            <div class="input-wrapper">
+                <input type="text" class="input-field" id="textInput" placeholder="مثال: محمد، Ahmed، أو أي نص..." autocomplete="off" value="محمد">
+                <button class="btn-generate" id="generateBtn">
+                    <span class="sparkle">✨</span> زخرف الآن
+                </button>
+            </div>
+            <!-- فلاتر التصنيف -->
+            <div class="filter-section">
+                <div class="filter-label">تصفية حسب النمط</div>
+                <div class="filter-tabs" id="filterTabs">
+                    <button class="filter-tab active" data-category="all">
+                        <i class="fa-solid fa-layer-group tab-icon"></i> الكل
+                    </button>
+                    <button class="filter-tab" data-category="arabic">
+                        <i class="fa-solid fa-moon tab-icon"></i> عربية
+                    </button>
+                    <button class="filter-tab" data-category="classic">
+                        <i class="fa-solid fa-feather-pointed tab-icon"></i> كلاسيكية
+                    </button>
+                    <button class="filter-tab" data-category="japanese">
+                        <i class="fa-solid fa-torii-gate tab-icon"></i> يابانية
+                    </button>
+                    <button class="filter-tab" data-category="symbolic">
+                        <i class="fa-solid fa-star tab-icon"></i> رمزية
+                    </button>
+                    <button class="filter-tab" data-category="modern">
+                        <i class="fa-solid fa-bolt tab-icon"></i> عصرية
+                    </button>
+                </div>
+            </div>
+            <!-- بحث ضمن النتائج -->
+            <div class="search-results">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="searchWithin" placeholder="ابحث ضمن النتائج (مثلاً: اسم نمط معين)...">
+            </div>
+        </section>
+
+        <!-- Results -->
+        <div class="results-header">
+            <h2>
+                <i class="fa-solid fa-sparkles" style="color: var(--primary);"></i>
+                نتائج الزخرفة
+                <span class="results-count-badge" id="resultsCountBadge">0</span>
+            </h2>
+        </div>
+        <div class="results-grid" id="resultsGrid"></div>
+        <div class="empty-state" id="emptyState" style="display:none;">
+            <div class="empty-icon">🔮</div>
+            <h3>ابدأ بكتابة اسمك</h3>
+            <p>أدخل نصاً في الحقل أعلاه لتوليد زخارف فورية من مكتبة ضخمة.</p>
+        </div>
+
+        <!-- Trending Section -->
+        <section class="trending-section" id="trendingSection">
+            <h2><span class="fire-icon">🔥</span> الأكثر استخداماً</h2>
+            <div class="trending-grid" id="trendingGrid"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h4>✨ SRG ORNAMENTATION</h4>
+                <p>منصة زخرفة النصوص الاحترافية الأولى. نقدم مكتبة ضخمة من الخطوط والزخارف العالمية بتقنيات الذكاء الاصطناعي.</p>
+            </div>
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">المكتبة الكاملة</a></li>
+                    <li><a href="#">المفضلة</a></li>
+                    <li><a href="#">من نحن</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>أنماط الزخرفة</h4>
+                <ul>
+                    <li><a href="#">زخارف عربية</a></li>
+                    <li><a href="#">زخارف كلاسيكية</a></li>
+                    <li><a href="#">زخارف يابانية</a></li>
+                    <li><a href="#">زخارف رمزية</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>تواصل معنا</h4>
+                <p>تابعنا على وسائل التواصل الاجتماعي للحصول على آخر التحديثات والإضافات.</p>
+            </div>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="social-section">
+            <h4>📲 تابعنا على وسائل التواصل</h4>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/ga.mal1074?igsh=NnVoNzh2Mnl0cjgx" target="_blank" rel="noopener noreferrer" class="social-icon instagram" title="انستجرام">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span class="social-tooltip">Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/share/17dnoA9Xen/" target="_blank" rel="noopener noreferrer" class="social-icon facebook" title="فيسبوك">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <span class="social-tooltip">Facebook</span>
+                </a>
+                <a href="#" class="social-icon tiktok" title="تيك توك">
+                    <i class="fa-brands fa-tiktok"></i>
+                    <span class="social-tooltip">TikTok</span>
+                </a>
+                <a href="#" class="social-icon github" title="جيت هب">
+                    <i class="fa-brands fa-github"></i>
+                    <span class="social-tooltip">GitHub</span>
+                </a>
+                <a href="#" class="social-icon x" title="إكس - تويتر سابقاً">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <span class="social-tooltip">X (Twitter)</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 <strong>SRG ORNAMENTATION</strong> — جميع الحقوق محفوظة. صنع بكل ❤️ و إبداع.
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script>
+        (function() {
+            // ============ DOM Elements ============
+            const textInput = document.getElementById('textInput');
+            const generateBtn = document.getElementById('generateBtn');
+            const resultsGrid = document.getElementById('resultsGrid');
+            const resultsCountBadge = document.getElementById('resultsCountBadge');
+            const emptyState = document.getElementById('emptyState');
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const searchWithin = document.getElementById('searchWithin');
+            const themeToggle = document.getElementById('themeToggle');
+            const showFavoritesBtn = document.getElementById('showFavoritesBtn');
+            const favBadge = document.getElementById('favBadge');
+            const toastContainer = document.getElementById('toastContainer');
+            const trendingGrid = document.getElementById('trendingGrid');
+            const totalStylesEl = document.getElementById('totalStyles');
+            const totalCopiesEl = document.getElementById('totalCopies');
+
+            // ============ State ============
+            let currentResults = [];
+            let activeCategory = 'all';
+            let favorites = JSON.parse(localStorage.getItem('srg_favorites_v2') || '[]');
+            let trending = JSON.parse(localStorage.getItem('srg_trending_v2') || '[]');
+            let totalCopies = parseInt(localStorage.getItem('srg_total_copies_v2') || '0');
+            let darkMode = localStorage.getItem('srg_darkMode_v2') === 'true';
+
+            // ============ Ornament Data ============
+            const arabicOrnaments = {
+                prefixes: ['★', '☆', '●', '○', '◆', '◇', '▲', '△', '☾', '☽', '✦', '✧', '❃', '❂', '✿', '❀', '۞', 'ஐ', '₪', '™', '©', '®', '♛', '♔', '♕', '♚', '👑', '💎', '🌟', '⭐', '✨', '🔥', '💫', '🌈', '🎯', '🏆'],
+                suffixes: ['★', '☆', '●', '○', '◆', '◇', '▲', '△', '☾', '☽', '✦', '✧', '❃', '❂', '✿', '❀', '۞', 'ஐ', '₪', '♛', '♔', '👑', '💎', '🌟', '⭐', '✨', '🔥'],
+                frames: [
+                    (t) => `★彡 ${t} 彡★`,
+                    (t) => `☆彡 ${t} 彡☆`,
+                    (t) => `●◉ ${t} ◉●`,
+                    (t) => `◆◇ ${t} ◇◆`,
+                    (t) => `☾ ${t} ☽`,
+                    (t) => `✧ ${t} ✧`,
+                    (t) => `❃ ${t} ❃`,
+                    (t) => `❂ ${t} ❂`,
+                    (t) => `✿ ${t} ✿`,
+                    (t) => `❀ ${t} ❀`,
+                    (t) => `۞ ${t} ۞`,
+                    (t) => `ஐ ${t} ஐ`,
+                    (t) => `₪ ${t} ₪`,
+                    (t) => `♛ ${t} ♛`,
+                    (t) => `【 ${t} 】`,
+                    (t) => `『 ${t} 』`,
+                    (t) => `「 ${t} 」`,
+                    (t) => `《 ${t} 》`,
+                    (t) => `〔 ${t} 〕`,
+                    (t) => `〖 ${t} 〗`,
+                    (t) => `〘 ${t} 〙`,
+                    (t) => `〚 ${t} 〛`,
+                    (t) => `👑 ${t} 👑`,
+                    (t) => `💎 ${t} 💎`,
+                    (t) => `🌟 ${t} 🌟`,
+                    (t) => `🔥 ${t} 🔥`,
+                    (t) => `✨ ${t} ✨`,
+                    (t) => `╰☆☆ ${t} ☆☆╮`,
+                    (t) => `•°¯'•• ${t} ••'¯°•`,
+                    (t) => `¤ (¯´☆✭.¸_)¤ ${t} ¤(_¸.✭☆´¯) ¤`,
+                    (t) => `╔══ஓ☘️ ${t} ☘️ஓ══╗`,
+                    (t) => `•´¯'•» 🎀 ${t} 🎀 »•'¯'•`,
+                ],
+                diacritics: ['َ', 'ً', 'ِ', 'ٍ', 'ُ', 'ٌ', 'ْ', 'ّ', 'ٰ', 'ٓ', 'ٔ', 'ٕ', 'ۖ', 'ۗ', 'ۘ', 'ۙ', 'ۚ', 'ۛ', 'ۜ'],
+            };
+
+            const ornamentStyles = [
+                { name: 'عربية - إطار نجمي', category: 'arabic', gen: (t) => `★彡 ${t} 彡★` },
+                { name: 'عربية - إطار قمري', category: 'arabic', gen: (t) => `☾ ${t} ☽` },
+                { name: 'عربية - إطار لؤلؤي', category: 'arabic', gen: (t) => `●◉ ${t} ◉●` },
+                { name: 'عربية - إطار ماسي', category: 'arabic', gen: (t) => `◆◇ ${t} ◇◆` },
+                { name: 'عربية - زخرفة نجمة', category: 'arabic', gen: (t) => `✧ ${t} ✧` },
+                { name: 'عربية - زخرفة زهرية', category: 'arabic', gen: (t) => `✿ ${t} ✿` },
+                { name: 'عربية - إطار مربع', category: 'arabic', gen: (t) => `【 ${t} 】` },
+                { name: 'عربية - قوس مزدوج', category: 'arabic', gen: (t) => `『 ${t} 』` },
+                { name: 'عربية - تاج ملكي', category: 'arabic', gen: (t) => `♛ ${t} ♛` },
+                { name: 'عربية - جوهرة', category: 'arabic', gen: (t) => `💎 ${t} 💎` },
+                { name: 'عربية - تشكيل فني', category: 'arabic', gen: (t) => {
+                    let r = '۞ ';
+                    for (let c of t) { r += c; if (Math.random() > 0.5 && c !== ' ') r += arabicOrnaments.diacritics[Math.floor(Math.random() * arabicOrnaments.diacritics.length)]; }
+                    return r + ' ۞';
+                }},
+                { name: 'كلاسيكية - Bold Serif', category: 'classic', gen: (t) => toUnicodeMath(t, 0x1D3BF) },
+                { name: 'كلاسيكية - Cursive Script', category: 'classic', gen: (t) => toUnicodeMath(t, 0x1D4CF) },
+                { name: 'كلاسيكية - Double Struck', category: 'classic', gen: (t) => toDoubleStruck(t) },
+                { name: 'كلاسيكية - Fraktur Gothic', category: 'classic', gen: (t) => toFraktur(t) },
+                { name: 'كلاسيكية - Monospace Tech', category: 'classic', gen: (t) => toUnicodeMath(t, 0x1D629) },
+                { name: 'كلاسيكية - Small Caps', category: 'classic', gen: (t) => toSmallCaps(t) },
+                { name: 'يابانية - ساكورا', category: 'japanese', gen: (t) => `🌸 ${t} 🌸` },
+                { name: 'يابانية - نينجا', category: 'japanese', gen: (t) => `🗡️ ${t} 忍` },
+                { name: 'يابانية - ساموراي', category: 'japanese', gen: (t) => `⚔️ ${t} 侍` },
+                { name: 'يابانية - أنمي ماجيك', category: 'japanese', gen: (t) => `✨ ${t} 魔法 ✨` },
+                { name: 'يابانية - كايزو ستايل', category: 'japanese', gen: (t) => `【${t}】気` },
+                { name: 'رمزية - قلوب', category: 'symbolic', gen: (t) => t.split(' ').join(' ♥ ') },
+                { name: 'رمزية - تاج فخم', category: 'symbolic', gen: (t) => `♔ ${t} ♔` },
+                { name: 'رمزية - نار ولهيب', category: 'symbolic', gen: (t) => `🔥 ${t} 🔥` },
+                { name: 'رمزية - رموز متناثرة', category: 'symbolic', gen: (t) => t.split('').join('҉') + '҉' },
+                { name: 'عصرية - مينيمال', category: 'modern', gen: (t) => `— ${t} —` },
+                { name: 'عصرية - دوت ستايل', category: 'modern', gen: (t) => t.split('').join('.') },
+                { name: 'عصرية - سلاش', category: 'modern', gen: (t) => `// ${t} //` },
+                { name: 'عصرية - نيون', category: 'modern', gen: (t) => `⟪ ${t} ⟫` },
+                { name: 'عصرية - براكيت', category: 'modern', gen: (t) => `[ ${t} ]` },
+            ];
+
+            function toUnicodeMath(text, offset) {
+                return [...text].map(c => {
+                    if (c === ' ') return ' ';
+                    const cp = c.codePointAt(0);
+                    if (cp >= 65 && cp <= 90) return String.fromCodePoint(cp - 65 + offset);
+                    if (cp >= 97 && cp <= 122) return String.fromCodePoint(cp - 97 + offset + 26);
+                    return c;
+                }).join('');
+            }
+            function toDoubleStruck(text) {
+                return [...text].map(c => {
+                    if (c === ' ') return ' ';
+                    const cp = c.codePointAt(0);
+                    if (cp >= 65 && cp <= 90) return String.fromCodePoint(cp - 65 + 0x1D538);
+                    if (cp >= 97 && cp <= 122) return String.fromCodePoint(cp - 97 + 0x1D552);
+                    return c;
+                }).join('');
+            }
+            function toFraktur(text) {
+                return [...text].map(c => {
+                    if (c === ' ') return ' ';
+                    const cp = c.codePointAt(0);
+                    if (cp >= 65 && cp <= 90) return String.fromCodePoint(cp - 65 + 0x1D504);
+                    if (cp >= 97 && cp <= 122) return String.fromCodePoint(cp - 97 + 0x1D51E);
+                    return c;
+                }).join('');
+            }
+            function toSmallCaps(text) {
+                return [...text.toUpperCase()].map(c => {
+                    if (c === ' ') return ' ';
+                    const cp = c.codePointAt(0);
+                    if (cp >= 65 && cp <= 90) return String.fromCodePoint(cp - 65 + 0x1D00);
+                    return c;
+                }).join('');
+            }
+
+            function generateAllOrnaments(text) {
+                if (!text.trim()) return [];
+                const trimmed = text.trim();
+                const results = [...ornamentStyles.map((style, i) => ({
+                    id: i,
+                    text: style.gen(trimmed),
+                    styleName: style.name,
+                    category: style.category,
+                }))];
+                // توليد زخارف عربية إضافية عشوائية
+                for (let i = 0; i < 20; i++) {
+                    const rf = arabicOrnaments.frames[Math.floor(Math.random() * arabicOrnaments.frames.length)];
+                    results.push({
+                        id: results.length,
+                        text: rf(trimmed),
+                        styleName: `عربية - نمط إبداعي ${i + 1}`,
+                        category: 'arabic',
+                    });
+                }
+                return results;
+            }
+
+            function filterResults(results, category, searchTerm) {
+                let filtered = results;
+                if (category !== 'all') filtered = filtered.filter(r => r.category === category);
+                if (searchTerm.trim()) {
+                    const term = searchTerm.trim().toLowerCase();
+                    filtered = filtered.filter(r => r.styleName.toLowerCase().includes(term) || r.text.toLowerCase().includes(term));
+                }
+                return filtered;
+            }
+
+            function renderResults(results) {
+                const filtered = filterResults(results, activeCategory, searchWithin.value);
+                resultsGrid.innerHTML = '';
+                resultsCountBadge.textContent = filtered.length;
+                totalStylesEl.textContent = `+${ornamentStyles.length}`;
+
+                if (filtered.length === 0) {
+                    emptyState.style.display = 'block';
+                    resultsGrid.style.display = 'none';
+                } else {
+                    emptyState.style.display = 'none';
+                    resultsGrid.style.display = 'grid';
+                    filtered.forEach(result => {
+                        const isFav = favorites.some(f => f.id === result.id && f.text === result.text);
+                        const card = document.createElement('div');
+                        card.className = 'result-card';
+                        card.innerHTML = `
+                            <div class="ornamented-text">${escapeHTML(result.text)}</div>
+                            <div class="style-badge"><i class="fa-solid fa-tag"></i> ${result.styleName}</div>
+                            <div class="card-actions">
+                                <button class="btn-copy copy-btn" data-text="${escapeHTML(result.text)}">
+                                    <i class="fa-solid fa-copy"></i> نسخ
+                                </button>
+                                <button class="btn-fav fav-btn ${isFav ? 'favorited' : ''}" data-id="${result.id}" data-text="${escapeHTML(result.text)}" data-style="${escapeHTML(result.styleName)}" data-category="${result.category}">
+                                    <i class="fa-solid fa-heart"></i>
+                                </button>
+                            </div>
+                        `;
+                        resultsGrid.appendChild(card);
+                    });
+
+                    document.querySelectorAll('.copy-btn').forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            const text = this.getAttribute('data-text');
+                            copyToClipboard(text);
+                            this.classList.add('copied');
+                            this.innerHTML = '<i class="fa-solid fa-check"></i> تم النسخ!';
+                            updateTrending(text);
+                            updateTotalCopies();
+                            setTimeout(() => {
+                                this.classList.remove('copied');
+                                this.innerHTML = '<i class="fa-solid fa-copy"></i> نسخ';
+                            }, 1800);
+                        });
+                    });
+
+                    document.querySelectorAll('.fav-btn').forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            const id = parseInt(this.getAttribute('data-id'));
+                            const text = this.getAttribute('data-text');
+                            const style = this.getAttribute('data-style');
+                            const category = this.getAttribute('data-category');
+                            toggleFavorite(id, text, style, category, this);
+                        });
+                    });
+                }
+            }
+
+            function escapeHTML(str) {
+                const div = document.createElement('div');
+                div.textContent = str;
+                return div.innerHTML;
+            }
+
+            function copyToClipboard(text) {
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(text).then(() => showToast('✅ تم النسخ إلى الحافظة!'));
+                } else {
+                    const ta = document.createElement('textarea');
+                    ta.value = text;
+                    ta.style.cssText = 'position:fixed;opacity:0;';
+                    document.body.appendChild(ta);
+                    ta.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(ta);
+                    showToast('✅ تم النسخ إلى الحافظة!');
+                }
+            }
+
+            function showToast(message) {
+                const toast = document.createElement('div');
+                toast.className = 'toast';
+                toast.textContent = message;
+                toastContainer.appendChild(toast);
+                setTimeout(() => toast.remove(), 2500);
+            }
+
+            function toggleFavorite(id, text, style, category, btnElement) {
+                const idx = favorites.findIndex(f => f.id === id && f.text === text);
+                if (idx > -1) {
+                    favorites.splice(idx, 1);
+                    if (btnElement) { btnElement.classList.remove('favorited'); }
+                    showToast('🗑️ تمت إزالتها من المفضلة');
+                } else {
+                    favorites.push({ id, text, style, category, date: Date.now() });
+                    if (btnElement) { btnElement.classList.add('favorited'); }
+                    showToast('❤️ تمت الإضافة إلى المفضلة!');
+                }
+                localStorage.setItem('srg_favorites_v2', JSON.stringify(favorites));
+                updateFavBadge();
+                if (showFavoritesBtn.classList.contains('active')) showFavorites();
+            }
+
+            function updateFavBadge() {
+                if (favorites.length > 0) {
+                    favBadge.style.display = 'flex';
+                    favBadge.textContent = favorites.length;
+                } else {
+                    favBadge.style.display = 'none';
+                }
+            }
+
+            function updateTotalCopies() {
+                totalCopies++;
+                localStorage.setItem('srg_total_copies_v2', totalCopies.toString());
+                totalCopiesEl.textContent = totalCopies.toLocaleString('ar-EG');
+            }
+
+            function updateTrending(text) {
+                let found = trending.find(t => t.text === text);
+                if (found) { found.count++; found.date = Date.now(); }
+                else { trending.push({ text, count: 1, date: Date.now() }); }
+                trending.sort((a, b) => b.count - a.count);
+                trending = trending.slice(0, 20);
+                localStorage.setItem('srg_trending_v2', JSON.stringify(trending));
+                renderTrending();
+            }
+
+            function renderTrending() {
+                const top = trending.slice(0, 8);
+                trendingGrid.innerHTML = top.length === 0
+                    ? '<p style="color:var(--text-secondary);text-align:center;width:100%;padding:2rem;">لا توجد زخارف شائعة بعد. ابدأ بنسخ الزخارف!</p>'
+                    : top.map(item => `
+                        <div class="trending-item" onclick="document.getElementById('textInput').value='${escapeHTML(item.text.replace(/[★彡☾●◉◆◇✧✿❃❂۞ஐ₪♛👑💎🌟🔥✨【】『』「」《》〔〕〖〗〘〙〚〛🌸🗡️⚔️♔♥»«\\-\\*\\/\\[\\]⟪⟫\\.]/g, '').trim()}';document.getElementById('generateBtn').click();window.scrollTo({top:300,behavior:'smooth'});">
+                            ${escapeHTML(item.text)}
+                            <span class="trend-count">🔥 ${item.count} نسخة</span>
+                        </div>
+                    `).join('');
+            }
+
+            function showFavorites() {
+                if (favorites.length === 0) {
+                    resultsGrid.innerHTML = '';
+                    emptyState.style.display = 'block';
+                    emptyState.querySelector('h3').textContent = '📭 لا توجد مفضلات';
+                    emptyState.querySelector('p').textContent = 'انسخ الزخارف التي تعجبك وأضفها للمفضلة.';
+                    resultsGrid.style.display = 'none';
+                    resultsCountBadge.textContent = '0';
+                } else {
+                    emptyState.style.display = 'none';
+                    resultsGrid.style.display = 'grid';
+                    resultsCountBadge.textContent = favorites.length;
+                    currentResults = favorites.map(f => ({ id: f.id, text: f.text, styleName: f.style, category: f.category }));
+                    renderResults(currentResults);
+                }
+                showFavoritesBtn.classList.add('active');
+                activeCategory = 'all';
+                filterTabs.forEach(t => t.classList.remove('active'));
+                document.querySelector('[data-category="all"]').classList.add('active');
+                searchWithin.value = '';
+            }
+
+            function generateAndRender() {
+                const text = textInput.value.trim();
+                if (!text) {
+                    resultsGrid.innerHTML = '';
+                    emptyState.style.display = 'block';
+                    resultsGrid.style.display = 'none';
+                    resultsCountBadge.textContent = '0';
+                    return;
+                }
+                showFavoritesBtn.classList.remove('active');
+                currentResults = generateAllOrnaments(text);
+                renderResults(currentResults);
+                searchWithin.value = '';
+                document.querySelector('.results-header').scrollIntoView({ behavior: 'smooth' });
+            }
+
+            // ============ Event Listeners ============
+            textInput.addEventListener('input', function() {
+                clearTimeout(this._t);
+                this._t = setTimeout(generateAndRender, 500);
+            });
+            generateBtn.addEventListener('click', generateAndRender);
+            textInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') generateAndRender(); });
+
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    activeCategory = this.getAttribute('data-category');
+                    renderResults(currentResults);
+                });
+            });
+            searchWithin.addEventListener('input', () => renderResults(currentResults));
+
+            themeToggle.addEventListener('click', () => {
+                darkMode = !darkMode;
+                document.body.classList.toggle('dark', darkMode);
+                themeToggle.innerHTML = darkMode ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+                localStorage.setItem('srg_darkMode_v2', darkMode);
+            });
+
+            showFavoritesBtn.addEventListener('click', function() {
+                this.classList.contains('active') ? (this.classList.remove('active'), generateAndRender()) : showFavorites();
+            });
+
+            // ============ Initialize ============
+            function init() {
+                if (darkMode) { document.body.classList.add('dark'); themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>'; }
+                updateFavBadge();
+                totalCopiesEl.textContent = totalCopies.toLocaleString('ar-EG');
+                renderTrending();
+                generateAndRender();
+            }
+            init();
+        })();
+    </script>
+</body>
+</html>
